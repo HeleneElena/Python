@@ -1,70 +1,7 @@
-#1
-x = int(input())
-y = int(input())
-c = int(input())
-sum = 0
-if x > 0:
-    sum = sum + x
-if y > 0:
-    sum = sum + y
-if c > 0:
-    sum = sum + c
-print(sum)
+def fib(n):
+    x, y = 0, 1
+    for i in range(n):
+        x, y = y, x + y
+    return x
 
-#2
-alt = int(input())
-if alt <= 13:
-    print('детство')
-if 14 <= alt <= 24:
-    print('молодость')
-if 25 <= alt <= 59:
-    print('зрелость')
-if alt >= 60:
-    print('старость')
-
-#3
-n = int(input())
-a = n % 10000 // 1000
-b = n % 1000 // 100
-c = n % 100 // 10
-d = n % 10
-print('Цифра в позиции тысяч равна', a)
-print('Цифра в позиции сотен равна', b)
-
-print('Цифра в позиции десятков равна', c)
-print('Цифра в позиции единиц равна', d)
-
-#4
-n = int(input())
-a = n % 10
-b = (n % 100) // 10
-c = n // 100
-print(n)
-print(str(c) + str(a) + str(b))
-print(str(b) + str(c) + str(a))
-
-print(str(b) + str(a) + str(c))
-print(str(a) + str(c) + str(b))
-print(str(a) + str(b) + str(c))
-
-#5
-n = int(input())
-a = n % 10
-b = (n % 100) // 10
-c = n // 100
-print('Сумма цифр =', a + b + c)
-print('Произведение цифр =', a * b * c)
-
-#6
-x = int(input())
-print(x, 'мин - это', x // 60, 'час', x % 60, 'минут.')
-
-#7
-n = int(input())
-m = 4
-y = (n + m - 1) // m
-print(y)
-
-#8
-n = int(input())
-print(n // 2 + n % 2)
+print(fib(31))
